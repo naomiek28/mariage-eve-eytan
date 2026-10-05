@@ -10,7 +10,7 @@
   box-sizing:border-box
 }
 
-html {
+html 
   scroll-behavior:smooth;
   background:var(--forest)
 }
@@ -195,7 +195,7 @@ body.loader-finished .opening,body.loader-finished .music-toggle {
   display:block;
   overflow:hidden;
   background-color:#e9dfc9;
-  background-image:url("images/background-envelope.jpeg");
+  background-image:url("images/opening-garden.jpeg");
   background-position:center center;
   background-size:cover;
   background-repeat:no-repeat
