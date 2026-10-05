@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102f27">
+
+  <title>Mariage Eve &amp; Eytan</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/logo.png"
+  >
+</head>
+
+<body class="is-loading">
+
+  <!-- LOADER -->
+  <div
+    class="page-loader"
+    id="pageLoader"
+    role="status"
+    aria-label="Chargement du faire-part"
+  >
+    <div class="loader-content">
+
+      <div class="loader-logo-shell">
+        <img
+          class="loader-logo loader-logo-base"
+          src="images/logo.png"
+          alt=""
+        >
+
+        <div class="loader-logo-fill">
+          <img
+            class="loader-logo"
+            src="images/logo.png"
+            alt="Eve et Eytan"
+          >
+        </div>
+      </div>
+
+      <div class="loader-countdown" id="loaderCountdown">
+
+        <div class="loader-countdown-box">
+          <span id="loaderDays">00</span>
+          <small>JOURS</small>
+        </div>
+
+        <div class="loader-countdown-box">
+          <span id="loaderHours">00</span>
+          <small>HEURES</small>
+        </div>
+
+        <div class="loader-countdown-box">
+          <span id="loaderMinutes">00</span>
+          <small>MIN</small>
+        </div>
+
+        <div class="loader-countdown-box">
+          <span id="loaderSeconds">00</span>
+          <small>SEC</small>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MUSIQUE -->
+  <audio
+    id="weddingMusic"
+    src="audio/musique.mp3"
+    preload="auto"
+  ></audio>
+
+  <button
+    class="music-toggle"
+    id="musicToggle"
+    type="button"
+    aria-label="Lancer la musique"
+  >
+    ♪
+  </button>
+
+  <!-- PAGE AVEC L’ENVELOPPE -->
+  <section class="opening" id="opening">
+    <div class="opening-content">
+
+      <p class="intro-text">
+        UNE INVITATION DE LA PART DE
+      </p>
+
+      <h1 class="couple-names">
+        Eve <span>&amp;</span> Eytan
+      </h1>
+
+      <button
+        class="envelope-button"
+        id="openEnvelope"
+        type="button"
+        aria-label="Ouvrir l’invitation"
+      >
+        <img
+          src="images/enveloppe.png"
+          alt="Enveloppe de l’invitation"
+          class="envelope-img"
+        >
+      </button>
+
+      <p class="open-instruction">
+        Touchez l’enveloppe pour l’ouvrir
+      </p>
+
+    </div>
+  </section>
+
+  <!-- INVITATION -->
+  <main class="invitation" id="invitation">
+
+    <!-- PREMIÈRE PAGE -->
+    <section class="invitation-page first-page reveal-on-scroll">
+      <div class="arch-card">
+
+        <!-- PASSOUK EN FORME D’ARCHE -->
+        <svg
+          class="arch-pasouk"
+          viewBox="0 0 400 112"
+          role="img"
+          aria-label="קול ששון וקול שמחה קול חתן וקול כלה"
+        >
+          <path
+            id="pasoukCurve"
+            d="M 34 94 Q 200 8 366 94"
+            fill="none"
+          ></path>
+
+          <text
+            direction="rtl"
+            unicode-bidi="bidi-override"
+          >
+            <textPath
+              href="#pasoukCurve"
+              startOffset="50%"
+              text-anchor="middle"
+            >&#1511;&#1493;&#1500; &#1513;&#1513;&#1493;&#1503; &#1493;&#1511;&#1493;&#1500; &#1513;&#1502;&#1495;&#1492; &#1511;&#1493;&#1500; &#1495;&#1514;&#1503; &#1493;&#1511;&#1493;&#1500; &#1499;&#1500;&#1492;</textPath>
+          </text>
+        </svg>
+
+        <!-- FAMILLES -->
+        <div class="families-at-top">
+
+          <div class="family-column family-eve">
+            <p>M. Georges Danan</p>
+            <p>Mme Annie Attias</p>
+            <p>M. &amp; Mme Avraham Abendanan</p>
+            <p>M. &amp; Mme Gabriel Elkaim</p>
+            <p>M. &amp; Mme Emmanuel Elkaim</p>
+          </div>
+
+          <div class="family-column family-eytan">
+            <p>M. &amp; Mme Daniel Sebbag</p>
+            <p>Mme Violette Hazan</p>
+            <p>M. &amp; Mme Yaacov Hazan</p>
+          </div>
+
+        </div>
+
+        <p class="announcement">
+          Nous avons la joie de vous faire part
+        </p>
+
+        <p class="marriage-of">
+          du mariage de nos enfants et petits-enfants
+        </p>
+
+        <h2 class="couple-script">
+          Eve <i>&amp;</i> Eytan
+        </h2>
+
+        <span class="gold-mark"></span>
+
+        <p class="date-line">
+          Mercredi 23 décembre 2026
+        </p>
+
+        <p class="hebrew-date" dir="rtl">
+          י״ד בטבת תשפ״ז
+        </p>
+
+        <!-- COMPTE À REBOURS -->
+        <div class="countdown" id="countdown">
+
+          <div>
+            <span id="days">00</span>
+            <small>JOURS</small>
+          </div>
+
+          <div>
+            <span id="hours">00</span>
+            <small>HEURES</small>
+          </div>
+
+          <div>
+            <span id="minutes">00</span>
+            <small>MIN</small>
+          </div>
+
+          <div>
+            <span id="seconds">00</span>
+            <small>SEC</small>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉCEPTION -->
+    <section class="reception-section reveal-on-scroll">
+      <div class="reception-copy">
+
+        <p class="reception-heading">
+          LIEU DE RÉCEPTION
+        </p>
+
+        <span class="gold-mark"></span>
+
+        <h2 dir="rtl">אולם יער</h2>
+
+        <p class="reception-place">
+          1 Yasmin Street
+          <br>
+          Mate Yehuda Regional Council 90
+        </p>
+
+        <p class="reception-sentence">
+          Nous aurons la joie de vous accueillir
+          <br>
+          pour la Kabbalat Panim à <strong>18h30</strong>,
+          <br>
+          suivie de la Houppa à <strong>19h30</strong>.
+        </p>
+
+        <nav
+          class="editorial-links"
+          aria-label="Informations pratiques"
+        >
+          <a
+  href="https://www.waze.com/ul?q=1%20Yasmin%20Street%2C%20Mate%20Yehuda%20Regional%20Council%2090%2C%20Israel&amp;navigate=yes"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  OUVRIR WAZE <span></span>
+</a>
+          <a
+            id="calendarLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            AJOUTER AU CALENDRIER <span></span>
+          </a>
+
+          <a
+            id="appleCalendarLink"
+            class="apple-calendar-link"
+          >
+            CALENDRIER APPLE <span>+</span>
+          </a>
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp-section reveal-on-scroll">
+      <div class="rsvp-copy">
+
+        <p class="section-kicker">
+          RÉPONSE SOUHAITÉE
+        </p>
+
+        <h2>RSVP</h2>
+
+        <p class="rsvp-intro">
+          Merci de nous confirmer votre présence.
+        </p>
+
+        <form class="rsvp-form" id="rsvpForm">
+
+          <label class="field-label" for="guestSide">
+            Vous êtes invité(e) par
+          </label>
+
+          <select id="guestSide" required>
+            <option value="" selected disabled>
+              Choisir
+            </option>
+            <option value="eve">Eve</option>
+            <option value="eytan">Eytan</option>
+          </select>
+
+          <label class="field-label" for="guestName">
+            Nom complet
+          </label>
+
+          <input
+            id="guestName"
+            type="text"
+            autocomplete="name"
+            required
+          >
+
+          <div class="attendance-choice">
+
+            <label>
+              <input
+                type="radio"
+                name="attendance"
+                value="yes"
+                checked
+              >
+              <span>Oui, je viens</span>
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="attendance"
+                value="no"
+              >
+              <span>Non, je ne pourrai pas</span>
+            </label>
+
+          </div>
+
+          <label class="field-label" for="guestCount">
+            Nombre de personnes
+          </label>
+
+          <select id="guestCount">
+            <option value="1">1 personne</option>
+            <option value="2">2 personnes</option>
+            <option value="3">3 personnes</option>
+            <option value="4">4 personnes</option>
+            <option value="5">5 personnes</option>
+            <option value="6">6 personnes</option>
+          </select>
+
+          <label class="field-label" for="guestMessage">
+            Un mot pour les mariés
+          </label>
+
+          <textarea id="guestMessage"></textarea>
+
+          <button class="submit-link" type="submit">
+            ENVOYER MA RÉPONSE <span>→</span>
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- CRÉDIT -->
+    <footer class="creator-credit">
+
+      <p>
+        Faire-part digital réalisé par Naomie Karsenty
+      </p>
+
+      <a
+        href="https://wa.me/972534235532"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp · +972-53-423-5532
+      </a>
+
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
