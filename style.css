@@ -195,7 +195,7 @@ body.loader-finished .opening,body.loader-finished .music-toggle {
   display:block;
   overflow:hidden;
   background-color:#e9dfc9;
-  background-image:url("images/opening-garden.png");
+  background-image:url("images/background-envelope.jpeg");
   background-position:center center;
   background-size:cover;
   background-repeat:no-repeat
@@ -420,10 +420,12 @@ body.invitation-open .arch-card > .countdown {
 .arch-pasouk text {
   fill:#3f2e25;
   font-family:"Times New Roman","Noto Serif Hebrew",serif;
-  font-size:20px;
+  font-size:18px;
   font-style:normal;
   font-weight:500;
-  letter-spacing:.01em
+  letter-spacing:0;
+  direction:rtl;
+  unicode-bidi:isolate
 }
 
 .families-at-top {
